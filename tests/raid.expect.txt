@@ -1,0 +1,26 @@
+replay through arcraiders; arcraiders drives; ticks of 25 ms
+# Made-up sample: ARC Raiders starts in front, nothing pulled yet
+@ 0.000
+  log ARC Raiders started
+  facts running=true active=true menu=false context=""
+  out L2 FEEDBACK [3 2] R2 WEAPON [2 6 5] light 255 140 30 @60
+  shown light=raider l2=aim r2=fire
+# Aim with L2, fire three shots with R2: the effects stay as they are
+# Alt-tab to another window: both triggers free
+@ 3.000
+  out L2 OFF [] R2 OFF []
+  shown light=raider l2=- r2=-
+# Back in the game: the effects return
+@ 4.000
+  out L2 FEEDBACK [3 2] R2 WEAPON [2 6 5]
+  shown light=raider l2=aim r2=fire
+# The game closes: the controller rests
+@ 5.000
+  out L2 OFF [] R2 OFF []
+  shown light=raider l2=- r2=-
+@ 6.050
+  log ARC Raiders closed
+  facts running=false active=true menu=false context=""
+  out handback
+# Bururu sees the game is gone and hands the controller back
+end @ 7.500

@@ -1,0 +1,57 @@
+// The ARC Raiders mod. On PC the game plays its own DualSense haptics
+// (on the cable) but, as far as players report, no trigger effects and
+// no lightbar, so this mod adds the trigger effects and a lightbar colour
+// and leaves the haptics to the game. It reads nothing but the
+// controller: no game files, no screen, no keys.
+{
+  "manifest": 1,
+  "id": "arcraiders",
+  "name": "ARC Raiders",
+  "version": "0.1.0",
+  "api": "0.11",
+  "kind": "game",
+  "authors": ["Bururu"],
+  "license": "MIT",
+  "summary": "Adaptive triggers and a lightbar colour for ARC Raiders, next to the game's own haptics.",
+  "homepage": "https://github.com/getbururu/mod-arcraiders",
+  "icon": "target",
+
+  "games": {
+    "arc-raiders": {
+      "name": "ARC Raiders",
+      "short_name": "ARC Raiders",
+      "steam_app": 1808500,
+      "stores": {
+        "steam": [1808500],
+        "epic": [{ "app": "20f01ab5e0fa4e798c6d58eeb8d86989",
+                   "namespace": "b4bb52a95d0b43d9af543c6ec3c54e04",
+                   "item": "385e1e3cc5d34c1b9f6fc5610cf60e69" }],
+        "xbox": [{ "family": "Embark.arc-raiders_kd876xf6dde24", "store_id": "9NDF1F263RZ4" }]
+      },
+      "process": {
+        "windows": { "game": ["PioneerGame.exe"] },
+        "linux":   { "game": ["PioneerGame.exe"], "match": "cmdline" }
+      },
+      "markers": ["PioneerGame.exe", "PioneerGame/Binaries/Win64/PioneerGame.exe"],
+      // the game reads the DualSense itself and Bururu shows it no virtual
+      // controller: one has not been tried with its kernel-level anti-cheat
+      "virtual_pad": "never",
+      // its haptics go to the DualSense's audio device, and as far as
+      // players report it sets no trigger effects or lights on PC, so on
+      // the cable Bururu's trigger effects and the game's haptics can
+      // share the controller
+      "native_dualsense": false,
+      "anti_cheat": { "kind": "kernel",
+                      "notes": "Denuvo Anti-Cheat and AnyBrain; Steam lists kernel-level anti-cheat. The mod reads only the controller." }
+    }
+  },
+
+  "dependencies": {},
+  "load_after": [], "load_before": [],
+
+  "demo": "demo/demo.replay.jsonl",
+  "rule_env": { "game": "sensors.game" },
+  "outputs": ["triggers", "lightbar"],
+  "permissions": { "files": [], "screen": false, "keyboard": false, "udp": [] },
+  "os": ["windows", "linux"]
+}

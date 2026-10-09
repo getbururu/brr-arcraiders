@@ -1,0 +1,16 @@
+// The triggers and the lightbar while ARC Raiders runs. Trigger and
+// colour names are keys of the settings "triggers" and "colors", so the
+// player tunes them on the mod's page. With the game in the background
+// both triggers are free and the lightbar keeps its colour.
+{
+  "format": 1,
+  "lightbar": {
+    // the game leaves the lightbar alone; this gives it a calm colour
+    "raider": { "priority": 0, "if": "settings.lightbar ~= false", "color": "raider", "bright": 0.3 },
+    "dark":   { "priority": 1, "if": "settings.lightbar == false", "off": true }
+  },
+  "triggers": {
+    // R2 fires, L2 aims: a click on R2 and a light wall on L2
+    "weapons": { "priority": 0, "if": "game and game.in_front", "r2": "fire", "l2": "aim" }
+  }
+}

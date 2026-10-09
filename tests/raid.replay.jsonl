@@ -1,0 +1,19 @@
+{"replay":1,"mod":"arcraiders","mod_version":"0.1.0","bururu":"0.11.0","start_unix_ms":1767268800000,"poll_ms":25}
+{"t_ms":0,"step":"Made-up sample: ARC Raiders starts in front, nothing pulled yet"}
+{"t_ms":0,"sensor":"game","running":true,"in_front":true}
+{"t_ms":0,"sensor":"pad","state":{"gyro_raw":[0,0,0]}}
+{"t_ms":1000,"step":"Aim with L2, fire three shots with R2: the effects stay as they are"}
+{"t_ms":1000,"sensor":"pad","state":{"held":["l2"],"pressed":["l2"],"l2":210,"gyro_raw":[0,0,0]}}
+{"t_ms":1300,"sensor":"pad","state":{"held":["l2","r2"],"pressed":["r2"],"l2":210,"r2":240,"gyro_raw":[0,0,0]}}
+{"t_ms":1450,"sensor":"pad","state":{"held":["l2"],"l2":210,"gyro_raw":[0,0,0]}}
+{"t_ms":1700,"sensor":"pad","state":{"held":["l2","r2"],"pressed":["r2"],"l2":210,"r2":240,"gyro_raw":[0,0,0]}}
+{"t_ms":1850,"sensor":"pad","state":{"held":["l2"],"l2":210,"gyro_raw":[0,0,0]}}
+{"t_ms":2100,"sensor":"pad","state":{"held":["l2","r2"],"pressed":["r2"],"l2":210,"r2":240,"gyro_raw":[0,0,0]}}
+{"t_ms":2250,"sensor":"pad","state":{"gyro_raw":[0,0,0]}}
+{"t_ms":3000,"step":"Alt-tab to another window: both triggers free"}
+{"t_ms":3000,"sensor":"game","running":true,"in_front":false}
+{"t_ms":4000,"step":"Back in the game: the effects return"}
+{"t_ms":4000,"sensor":"game","running":true,"in_front":true}
+{"t_ms":5000,"step":"The game closes: the controller rests"}
+{"t_ms":5000,"sensor":"game","running":false,"in_front":false}
+{"t_ms":6500,"step":"Bururu sees the game is gone and hands the controller back"}

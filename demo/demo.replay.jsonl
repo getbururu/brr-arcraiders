@@ -1,0 +1,12 @@
+{"replay":1,"mod":"arcraiders","mod_version":"0.1.0","bururu":"0.11.0","start_unix_ms":1767268800000,"poll_ms":25}
+{"t_ms":0,"sensor":"game","running":true,"in_front":true}
+{"t_ms":0,"sensor":"pad","state":{"gyro_raw":[0,0,0]}}
+{"t_ms":500,"step":"Weapons: pull R2 for the click, hold L2 for the light wall"}
+{"t_ms":1500,"sensor":"pad","state":{"held":["l2"],"pressed":["l2"],"l2":200,"gyro_raw":[0,0,0]}}
+{"t_ms":2500,"sensor":"pad","state":{"held":["l2","r2"],"pressed":["r2"],"l2":200,"r2":230,"gyro_raw":[0,0,0]}}
+{"t_ms":2700,"sensor":"pad","state":{"held":["l2"],"l2":200,"gyro_raw":[0,0,0]}}
+{"t_ms":3500,"sensor":"pad","state":{"held":["l2","r2"],"pressed":["r2"],"l2":200,"r2":230,"gyro_raw":[0,0,0]}}
+{"t_ms":3700,"sensor":"pad","state":{"held":["l2"],"l2":200,"gyro_raw":[0,0,0]}}
+{"t_ms":4500,"sensor":"pad","state":{"gyro_raw":[0,0,0]}}
+{"t_ms":6000,"step":"The end of the demo"}
+{"t_ms":6000,"sensor":"game","running":false,"in_front":false}

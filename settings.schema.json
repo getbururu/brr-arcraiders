@@ -1,0 +1,56 @@
+// The mod's settings and its page in Bururu (docs/modding/sharing.md).
+{
+  "schema": 1,
+  "settings": {
+    "triggers": {
+      "type": "map", "role": "trigger_table", "needs": "triggers",
+      "of": { "type": "trigger" },
+      // the same as the Elite mod's on-foot weapons
+      "default": {
+        "fire": { "mode": "WEAPON", "params": [2, 6, 5] },
+        "aim":  { "mode": "FEEDBACK", "params": [3, 2] }
+      },
+      "label": "Triggers",
+      "entries": {
+        "fire": { "label": "R2", "help": "A click partway down, like a gun trigger. Free turns it off.",
+                  "card": "Right trigger", "row": "Weapons" },
+        "aim":  { "label": "L2", "help": "A light wall while you aim. Free turns it off.",
+                  "card": "Left trigger", "row": "Weapons" }
+      }
+    },
+    "lightbar": {
+      "type": "bool", "default": true, "needs": "lightbar",
+      "label": "Light the lightbar",
+      "help": "ARC Raiders does not use the lightbar. On, it shows the colour below."
+    },
+    "colors": {
+      "type": "map", "role": "color_table", "needs": "lightbar",
+      "of": { "type": "rgb" },
+      "default": { "raider": [255, 140, 30] },
+      "label": "Colours",
+      "entries": {
+        "raider": { "label": "In the game", "help": "The lightbar while ARC Raiders runs." }
+      }
+    }
+  },
+  "pages": {
+    "effects": {
+      "title": "Effects", "icon": "trigger", "order": 1,
+      "lead": "ARC Raiders plays its own haptics. This mod adds the trigger effects and the lightbar.",
+      "cards": {
+        "triggers": {
+          "title": "Triggers", "order": 1,
+          "help": "Both triggers are free while the game is in the background.",
+          "rows": [ { "widget": "situations", "path": "triggers", "pairs": [["fire", "aim"]] } ]
+        },
+        "lights": {
+          "title": "Lightbar", "order": 2,
+          "rows": [
+            { "widget": "toggle", "path": "lightbar" },
+            { "widget": "color-grid", "path": "colors", "preview": "pad", "enabled_by": "lightbar" }
+          ]
+        }
+      }
+    }
+  }
+}
