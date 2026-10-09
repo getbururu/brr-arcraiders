@@ -13,7 +13,7 @@
   "authors": ["Bururu"],
   "license": "MIT",
   "summary": "Adaptive triggers and a lightbar colour for ARC Raiders, next to the game's own haptics.",
-  "homepage": "https://github.com/getbururu/mod-arcraiders",
+  "homepage": "https://github.com/getbururu/brr-arcraiders",
   "icon": "target",
 
   "games": {
