@@ -15,7 +15,7 @@ ARC Raiders on PC plays its own haptics on a DualSense connected by USB cable. A
 
 ## Install
 
-In Bururu, open **Mods**, then **Browse**, and click **Install** on ARC Raiders. Or download `arcraiders-<version>.brr` from [Releases](https://github.com/getbururu/brr-arcraiders/releases) and use **Install from file...** on the **Mods** page.
+In Bururu, open **Mods**, then **Browse**, and click **Install** on ARC Raiders. Or download `arcraiders-<version>.brr` from [Releases](https://github.com/getbururu/bururu-arcraiders/releases) and use **Install from file...** on the **Mods** page.
 
 ## Set up ARC Raiders
 
@@ -65,7 +65,7 @@ Bururu's modding guide, in the `docs\modding` folder next to `Bururu.exe`, expla
 
 ## Working on this mod
 
-- Clone it into Bururu's `mods` folder, in a folder named after the mod's id: `git clone https://github.com/getbururu/brr-arcraiders mods\arcraiders`. Bururu skips `.git` and `.github`, so the clone loads as it is.
+- Clone it into Bururu's `mods` folder, in a folder named after the mod's id: `git clone https://github.com/getbururu/bururu-arcraiders mods\arcraiders`. Bururu skips `.git` and `.github`, so the clone loads as it is.
 - `manifest.json` names the game and asks for no permissions, `lights.json` sets the triggers and the lightbar while the game runs, and `settings.schema.json` holds the effects and the page. `demo/demo.replay.jsonl` is what **Play demo** plays.
 - `.\brr mod check mods\arcraiders` checks the mod.
 - `tests/` holds a made-up session (aiming, three shots, alt-tab, closing the game) with what the mod does in it: `.\brr mod replay mods\arcraiders mods\arcraiders\tests\raid.replay.jsonl` plays it and compares. After a change you want, run it again with `--update`.
